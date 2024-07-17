@@ -1,0 +1,41 @@
+#:kivy 2.0
+
+
+<JapanFontTestWidget>:
+    BoxLayout:
+        size: root.size
+        orientation: 'vertical'
+        padding: 20
+        canvas.before:
+            Color:
+                rgba: 0.7, 0.7, 0.7, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        Label:
+            text:'ラベル１'
+            text_size: self.size
+            halign: 'right'
+            valign: 'bottom'
+            font_name: 'Mplus1-Medium.ttf'
+            font_size: '20pt'
+
+        Label:
+            text:'ラベル２'
+            text_size: self.size
+            halign: 'left'
+            valing: 'top'
+            font_name: 'Mplus1-Medium.ttf'
+            font_size: '20pt'
+
+        Label:
+            text: '[color=ffff33]ラベル[/color][color=ff33ff]3[/color]'
+            font_size: '20pt'
+            markup: True
+            font_name: 'Mplus1-Medium.ttf'
+
+        Label:
+            text: '[i]label[/i] [b]4[/b]'
+            font_size: '20pt'
+            markup: True
